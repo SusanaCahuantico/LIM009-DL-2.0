@@ -12,16 +12,13 @@ const json = () => {
 json();
 
 const pintar = (datos) => {
-    //console.log(datos)
     for(let i=0; i<datos.length; i++){
+        // eslint-disable-next-line no-console
         console.log(datos[i].name)
+        // eslint-disable-next-line no-console
         console.log(datos[i].species)
     }
 }
-box += `
-<div>
-
-`
 
 window.potter = {
     json,
