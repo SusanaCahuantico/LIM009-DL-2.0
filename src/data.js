@@ -18,6 +18,10 @@ const pintar = (datos) => {
         console.log(datos[i].species)
     }
 }
+box += `
+<div>
+
+`
 
 window.potter = {
     json,
