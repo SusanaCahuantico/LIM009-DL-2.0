@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lover 2.0 Harry Potter</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="contenedor">
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lover 2.0 Harry Potter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section class="contenedor">
+
+    <header class="col-4">
+      <img id="logo" src="imagen/logo.png" alt="logo-Harry-Potter">
+    </header>
+
+    <section class="col-4">
+      <h4>Ordenar por edad</h4>
+      <div>
+        <img src="imagen/flechaarriba.png" alt="flecha-arriba">
+        <h5>Ascendente</h5>
+      </div>
+      <div>
+        <img src="imagen/flechaabajo.png" alt="flecha-abajo">
+        <h5>Descendente</h5>
+      </div>
+    </section>
+
+    <section class="col-4">
+      <p>Filtrar por:</p>
+      <ul>
+        <li>Género</li>
+        <li>Rol</li>
+        <li>Casa</li>
+        <div>
+          <select name="" id="">
+            <option value="">Female</option>
+            <option value="">Male</option>
+          </select>
+          <select name="" id="">
+            <option value="">hogwartsStudent</option>
+            <option value="">hogwartsStaff</option>
+          </select>
+          <select name="" id="">
+            <option value="">Gryffindor</option>
+            <option value="">Slytherin</option>
+            <option value="">Hufflepuff</option>
+            <option value="">Ravenclaw</option>
+          </select>
+        </div>
+      </ul>
+    </section>
+  </section>
+
+  <section class="col-12">
+    <p>Personajes de la Saga de Harry Potter</p>
+    <div id="personajes">
       
-      <header class="col-4">
-        <img src="imagen/logo.png" alt="logo-Harry-Potter">
-      </header>
+    </div>
+  </section>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
 
-      <section class="col-4">
-        <h4>Ordenar por edad</h4>
-        <div>
-          <img src="imagen/flechaarriba.png" alt="flecha-arriba">
-          <h5>Ascendente</h5>
-        </div>
-        <div>
-          <img src="imagen/flechaabajo.png" alt="flecha-abajo">
-          <h5>Descendente</h5>
-        </div>
-      </section>
-
-      <section class="col-4">
-        <p>Filtrar por:</p>
-        <ul>
-          <li>Género</li>
-          <li>Rol</li>
-          <li>Casa</li>
-          <div>
-            <select name="" id="">
-              <option value="">Female</option>
-              <option value="">Male</option>
-            </select>
-            <select name="" id="">
-              <option value="">hogwartsStudent</option>
-              <option value="">hogwartsStaff</option>
-            </select>
-            <select name="" id="">
-              <option value="">Gryffindor</option>
-              <option value="">Slytherin</option>
-              <option value="">Hufflepuff</option>
-              <option value="">Ravenclaw</option>
-            </select>
-          </div>
-        </ul>
-      </section>
-    </section>
- 
-    <section class="col-12">
-      <p>Personajes de la Saga de Harry Potter</p>
-      <section>
-
-      </section>
-    </section>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
 </html>

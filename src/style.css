@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+#logo{
+    width: 98%;
+    padding: 50px 0 50px 5px;
+}
+
 .contenedor {
     position: relative;
     margin: auto;
@@ -21,5 +26,6 @@
 }
 
 .col-12 {
+    float: left;
     width: 100%;
 }
