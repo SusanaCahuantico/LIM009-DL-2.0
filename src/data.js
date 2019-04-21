@@ -1,7 +1,6 @@
 /* Manejo de data */
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
-// const personajes = document.getElementById('personajes');
 
 const cargarJSON = () => {
     fetch('https://raw.githubusercontent.com/SusanaCahuantico/LIM009-DL-2.0/master/src/data/potter.json')
@@ -24,18 +23,41 @@ const recorrerData = (datos) => {
             hogwartsStaff: datos[i].hogwartsStaff,
             hogwartsStudent: datos[i].hogwartsStudent,
             yearOfBirth: datos[i].yearOfBirth,
-            actor: datos[i].actor
-        });
+            actor: datos[i].actor,
+            gender: datos[i].gender});
     } 
-   // console.log(arrLista);
-    return(arrLista);
+    // eslint-disable-next-line no-console
+    // console.log(arrLista);
+    return arrLista;
+}
+
+// Creando mi función de filtrado por:
+
+const filtrarPorGenero = (datos, genero) => {
+    
+}
+
+// Creando la funcion edad:
+const resta = (datos) => {
+    let arrResta = [];
+    for(let i=0; i<datos.length; i++){
+      // eslint-disable-next-line no-console
+      console.log(arrResta);
+        /* arrResta.push({
+            yearOfBirth: datos[i].yearOfBirth
+        });*/
+} 
+// eslint-disable-next-line no-console
+console.log(arrResta);
 }
 
 /* Creando mi función de orden ascendente 
-const orderAsc = (datos) => {
-    let
-} */
+const ordenAsc = (datos, orden) => 
+*/
+
 window.potter = {
     cargarJSON,
-    recorrerData
+    recorrerData,
+    resta,
+    filtrarPorGenero
 }

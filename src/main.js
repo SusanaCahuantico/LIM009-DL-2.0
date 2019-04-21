@@ -13,10 +13,10 @@ const cardJSON = () => {
  cardJSON();
 
 /* imprimir la lista de los personajes: */
-
 const listaPotter = (datos) => {
     let mostrar = '';
     for (let i=0; i<datos.length ; i++) {
+        const rest = 1995 - datos[i].yearOfBirth;
        let box = `
        <div>
        <figure>
@@ -25,6 +25,8 @@ const listaPotter = (datos) => {
        <p> Nombre: ${ datos[i].name} </p>
        <p> Casa: ${ datos[i].house} </p>
        <p> Especie:${ datos[i].species} </p>
+       <p> Rol: ${datos[i].hogwartsStaff ? "HogwartsStaff" : "HogwartsStudent"} </p>
+       <p> Edad: ${ rest } </p>
        <p> Actor: ${ datos[i].actor} </p>
        </div>
        `;
@@ -33,4 +35,3 @@ const listaPotter = (datos) => {
    personajes.innerHTML = mostrar;
 };
 
-listaPotter();
