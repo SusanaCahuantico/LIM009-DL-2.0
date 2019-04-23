@@ -15,7 +15,7 @@ const cardJSON = () => {
         extraerData(datos);
         filtrarCasa(datos);
         filtrarRolStudent(datos);
-        filtrarRolStaff(datos);
+        // filtrarRolStaff(datos);
     })
 }
  cardJSON();
@@ -59,8 +59,12 @@ const filtrarCasa = (datos) => {
 
 const filtrarRolStudent = (datos) => {
     rol.addEventListener('change', () => {
-        const imprimirRol = window.potter.filtrarPorRolStudent(datos, rol.value);
-        listaPotter(imprimirRol); 
+       if ( rol.value === "hogwartsStudent") {
+           const student = window.potter.filtrarPorRolStudent(datos, rol.value);
+           listaPotter(student);
+       } else if ( rol.value === "hogwartsStaff") {
+           const staff = window.potter.filtrarPorRolStaff(datos, rol.value);
+           listaPotter(staff);
+       }
     })
 };
-

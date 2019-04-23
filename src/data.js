@@ -47,15 +47,15 @@ const filtrarPorCasa = (datos, filterBy) => {
 // Creando mi función de filtrado por rol Estudiante:
 
 const filtrarPorRolStudent = (datos) => {
-    const dataNew = datos.filter(elemento => elemento.hogwartsStudent);
-    return dataNew;
+    const nuevaData = datos.filter(elemento => elemento.hogwartsStudent === true);
+    return nuevaData;
 }
 
 /*Creando mi función de filtrado por rol Staff:*/
 
 const filtrarPorRolStaff = (datos) => {
-    const dataNuevo = datos.filter(element => element.hogwartsStaff);
-    return dataNuevo;
+    const nuevaData = datos.filter(element => element.hogwartsStaff === true);
+    return nuevaData;
 }
 /* Creando mi función de orden ascendente 
 const ordenAsc = (datos, orden) => {
