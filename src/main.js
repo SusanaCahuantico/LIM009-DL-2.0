@@ -28,7 +28,7 @@ const listaPotter = (datos) => {
     mostrar += `
        <div>
        <figure>
-       <img class='' src="${ datos[i].image}"/>
+       <img class='box' src="${ datos[i].image}"/>
        </figure>
        <p> Nombre: ${ datos[i].name} </p>
        <p> Casa: ${ datos[i].house} </p>
