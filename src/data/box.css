@@ -1,0 +1,13 @@
+#blog .box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#blog p{
+    margin: 15px; 
+}
+
+#blog img {
+    width: 100%;
+}

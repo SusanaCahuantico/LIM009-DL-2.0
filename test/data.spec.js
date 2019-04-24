@@ -1,5 +1,4 @@
 global.window = global;
-global.assert = require('chai').assert;
 require('../src/data');
 
 describe('example', () => {
@@ -11,4 +10,4 @@ describe('example', () => {
   it('debería retornar "example"', () => {
     assert.equal(example(), 'example');
   });
-})
+});
