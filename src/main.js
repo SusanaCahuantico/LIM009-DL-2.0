@@ -15,7 +15,7 @@ const cardJSON = () => {
       extraerData(datos);
       filtrarCasa(datos);
       filtrarRolStudent(datos);
-      filtrarEdad(datos);
+      ordenAsc(datos);
       ordenDesc(datos);
     });
 };
@@ -26,14 +26,14 @@ const listaPotter = (datos) => {
   let mostrar = '';
   for (let i = 0; i < datos.length ; i++) {
     mostrar += `
-       <div>
-       <figure>
-       <img class='box' src="${ datos[i].image}"/>
-       </figure>
-       <p> Nombre: ${ datos[i].name} </p>
-       <p> Casa: ${ datos[i].house} </p>
-       <p> Especie:${ datos[i].species} </p>
-       <p> Rol: ${datos[i].hogwartsStaff ? "Staff" : "Estudiante"} </p>
+    <section id="box-personajes" class="col-lg-4 col-" >
+       <div id="" class= "">
+       <img class="Imagenes" src="${ datos[i].image}"/>
+        <div>
+        <p> Nombre: ${ datos[i].name} </p>
+        <p> Casa: ${ datos[i].house} </p>
+        <p> Especie:${ datos[i].species} </p>
+        <p> Rol: ${datos[i].hogwartsStaff ? "Staff" : "Estudiante"} </p>
        `;
     if (typeof datos[i].yearOfBirth === "number") {
       mostrar += 
@@ -46,6 +46,8 @@ const listaPotter = (datos) => {
     mostrar += ` 
        <p> Actor: ${ datos[i].actor} </p>
        </div>
+       </div>
+    </section>   
        `;
   }
   personajes.innerHTML = mostrar;
@@ -77,16 +79,16 @@ const filtrarRolStudent = (datos) => {
   });
 };
 
-const filtrarEdad = (datos) => {
+const ordenAsc = (datos) => {
   ascendente.addEventListener('click', () => {
-    const ordenAscendente = potter.ordenEdad(datos);
+    const ordenAscendente = potter.ordenDescendente(datos);
     listaPotter(ordenAscendente); 
   });
 };
 
 const ordenDesc = (datos) => {
   descendente.addEventListener('click', () => {
-    const ordenDescendente = potter.ordenEdad(datos);
+    const ordenDescendente = potter.ordenAscendente(datos);
     listaPotter(ordenDescendente);
   });
 };

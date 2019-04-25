@@ -8,31 +8,37 @@
 </head>
 
 <body>
-  <section class="encabezado">
-
-    <header class="col-4">
-      <img id="logo" src="imagen/logo.png" alt="logo-Harry-Potter">
-    </header>
-
-    <section class="col-4">
-      <h4>Ordenar por edad;</h4>
+  <section id="menu" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+  
       <div>
-        <!--<img src="imagen/flechaarriba.png" alt="flecha-arriba">-->
-        <button id="ordenasc">Ascendente</button>
+        <header>
+          <img id="logo" src="imagen/logo.png" alt="logo-Harry-Potter">
+        </header>
       </div>
+
+
+    <section class="col-xs-4 col-sm-4 col-md-12 col-lg-12">
+      <h4 class="h4">Ordenar por edad;</h4>
+      <div class="btn">
+        <!--<img src="imagen/flechaarriba.png" alt="flecha-arriba">-->
+        <button id="ordenasc"  class="btn">Ascendente</button>
+      </div>
+
       <div>
         <!--<img src="imagen/flechaabajo.png" alt="flecha-abajo"> -->
-        <button id="ordendesc">Descendente</button>
+        <button id="ordendesc"  class="">Descendente</button>
       </div>
     </section>
 
-    <section class="col-4">
-      <p>Filtrar por:</p>
+    <section class="filtrar">
+      <p class="filtrar-por">Filtrar por:</p>
+      <div class="lista">
       <ul>
         <li>Género</li>
         <li>Rol</li>
         <li>Casa</li>
-        <div>
+      </div>
+        <div class="botones col-xs-8 col-sm-6 col-md-6 col-lg-6">
           <select name="" id="genero">
             <option value="female" id="">Female</option>
             <option value="male">Male</option>
@@ -53,9 +59,9 @@
     </section>
   </section>
 
-  <section class="contenedor">
+  <section id= "contenedor-personajes" class="col-xs-12 col-md-9 col-sm-9 col-lg-9">
     <!-- <img src="imagen/fondo2.jpg" alt="imagen de fondo">  -->
-    <p>Personajes de la Saga de Harry Potter:</p>
+    <p class="h4">Personajes de la Saga de Harry Potter:</p>
     <div id="personajes" class="box">
       
     </div>

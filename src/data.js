@@ -4,8 +4,8 @@
 
 // Creando mi función de filtrado por Genero:
 
-const filtrarPorGenero = (datos, filterPor) => {
-  const dataNueva = datos.filter(datito => datito.gender === filterPor);
+const filtrarPorGenero = (datos, genero) => {
+  const dataNueva = datos.filter(elemento => elemento.gender === genero);
   return dataNueva;
 }; 
 
@@ -19,20 +19,20 @@ const filtrarPorCasa = (datos, filterBy) => {
 // Creando mi función de filtrado por rol Estudiante:
 
 const filtrarPorRolStudent = (datos) => {
-  const nuevaData = datos.filter(elemento => elemento.hogwartsStudent === true);
+  const nuevaData = datos.filter(elemento => elemento.hogwartsStudent);
   return nuevaData;
 };
 
 // Creando mi función de filtrado por rol Staff:
 
 const filtrarPorRolStaff = (datos) => {
-  const nuevaData = datos.filter(element => element.hogwartsStaff === true);
+  const nuevaData = datos.filter(element => element.hogwartsStaff);
   return nuevaData;
 };
 
 /* Creando mi función de orden ascendente */
-const ordenEdad = (datos) => {
-  let orden = datos.sort((a, b) => {
+const ordenDescendente = (datos) => {
+  const orden = datos.sort((a, b) => {
     if (a.yearOfBirth > b.yearOfBirth) {
       return 1;
     } else {
@@ -42,10 +42,22 @@ const ordenEdad = (datos) => {
   return orden;
 };
 
+const ordenAscendente = (datos) => {
+  const ordenA = datos.sort((a,b) => {
+    if(a.yearOfBirth < b.yearOfBirth) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+  return ordenA;
+};
+
 window.potter = {
   filtrarPorGenero,
   filtrarPorCasa,
   filtrarPorRolStudent,
   filtrarPorRolStaff,
-  ordenEdad
+  ordenDescendente,
+  ordenAscendente
 };
