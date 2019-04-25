@@ -47,20 +47,11 @@ describe('filtrarPorRolStaff', () => {
   });
 });
 
-describe('filtrarPorRolStaff', () => {
+describe('ordenEdad', () => {
   it('debería ser una función', () => {
-    expect(typeof window.potter.filtrarPorRolStaff).toBe('function');
+    expect(typeof window.potter.ordenEdad).toBe('function');
   });
-  it('Esta función debería filtrar por Staff', () => {
-    expect(window.potter.filtrarPorRolStaff([{ name: "Harry Potter", hogwartsStaff: false}, { name: "Severus Snape", hogwartsStaff: true}], "Staff")).toEqual([{ name: "Severus Snape", hogwartsStaff: true}]);
-  });
-});
-
-describe('filtrarPorRolStaff', () => {
-  it('debería ser una función', () => {
-    expect(typeof window.potter.filtrarPorRolStaff).toBe('function');
-  });
-  it('Esta función debería filtrar por Staff', () => {
-    expect(window.potter.filtrarPorRolStaff([{ name: "Harry Potter", hogwartsStaff: false}, { name: "Severus Snape", hogwartsStaff: true}], "Staff")).toEqual([{ name: "Severus Snape", hogwartsStaff: true}]);
+  it('Esta función debería ordenar por edad', () => {
+    expect(window.potter.ordenEdad([{ yearOfBirth: 1980}, { yearOfBirth: 1960}])).toEqual([{ yearOfBirth: 1960}, { yearOfBirth: 1980}]);
   });
 });
