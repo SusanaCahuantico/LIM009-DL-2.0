@@ -44,7 +44,7 @@ const ordenDescendente = (datos) => {
 
 const ordenAscendente = (datos) => {
   const ordenA = datos.sort((a,b) => {
-    if(a.yearOfBirth < b.yearOfBirth) {
+    if (a.yearOfBirth < b.yearOfBirth) {
       return 1;
     } else {
       return -1;

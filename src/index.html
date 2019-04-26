@@ -8,17 +8,20 @@
 </head>
 
 <body>
-  <section id="menu" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+  <main>
+  <section class="col-xs-12 col-lg-3 todo">
   
       <div>
         <header>
-          <img id="logo" src="imagen/logo.png" alt="logo-Harry-Potter">
+          <img id="logo" src="imagen/logo.png" alt="logo-Harry-Potter" class="col-xs-4 col-lg-12">
         </header>
       </div>
 
 
-    <section class="col-xs-4 col-sm-4 col-md-12 col-lg-12">
-      <h4 class="h4">Ordenar por edad;</h4>
+    <section class="col-xs-4 col-lg-12">
+
+      <div class="h4"> Ordenar por edad</div>
+
       <div class="btn">
         <!--<img src="imagen/flechaarriba.png" alt="flecha-arriba">-->
         <button id="ordenasc"  class="btn">Ascendente</button>
@@ -30,42 +33,39 @@
       </div>
     </section>
 
-    <section class="filtrar">
+    <section class="col-xs-4 col-lg-12 filtrar">
       <p class="filtrar-por">Filtrar por:</p>
       <div class="lista">
-      <ul>
-        <li>Género</li>
-        <li>Rol</li>
-        <li>Casa</li>
       </div>
-        <div class="botones col-xs-8 col-sm-6 col-md-6 col-lg-6">
-          <select name="" id="genero">
-            <option value="female" id="">Female</option>
+        <div class="botones col-xs-4 col-lg-12">
+          <div>Genero</div><select id="genero">
+              <option>Genero</option>
+            <option value="female">Female</option>
             <option value="male">Male</option>
           </select>
-          <select name="" id="rol">
-            <option value ="">Seleccione rol del personaje</option>
-            <option id="rol-student" value="hogwartsStudent" >hogwartsStudent</option>
-            <option id="rol-staff" value="hogwartsStaff">hogwartsStaff</option>
+          <div>Rol</div><select id="rol">
+            <option>Rol</option>
+            <option id="rol-student" value="hogwartsStudent" >Estudiante</option>
+            <option id="rol-staff" value="hogwartsStaff">Personal</option>
           </select>
-          <select name="" id="casa">
+          <div>Casas</div><select id="casa">
+              <option>Casas</option>
             <option value="Gryffindor">Gryffindor</option>
             <option value="Slytherin">Slytherin</option>
             <option value="Hufflepuff">Hufflepuff</option>
             <option value="Ravenclaw">Ravenclaw</option>
           </select>
         </div>
-      </ul>
     </section>
   </section>
 
-  <section id= "contenedor-personajes" class="col-xs-12 col-md-9 col-sm-9 col-lg-9">
-    <!-- <img src="imagen/fondo2.jpg" alt="imagen de fondo">  -->
-    <p class="h4">Personajes de la Saga de Harry Potter:</p>
-    <div id="personajes" class="box">
+  <section id= "contenedor-personajes" class="col-xs-12 col-lg-9">
+    <p class="h4 titulo-principal">Personajes de la Saga de Harry Potter:</p>
+    <div id="personajes">
       
     </div>
   </section>
+  </main>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>

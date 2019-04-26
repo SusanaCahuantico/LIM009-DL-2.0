@@ -23,33 +23,63 @@ cardJSON();
 
 /* imprimir la lista de los personajes: */
 const listaPotter = (datos) => { 
-  let mostrar = '';
-  for (let i = 0; i < datos.length ; i++) {
+  let mostrar = "";
+  datos.forEach((element) => {
     mostrar += `
-    <section id="box-personajes" class="col-lg-4 col-" >
-       <div id="" class= "">
-       <img class="Imagenes" src="${ datos[i].image}"/>
-        <div>
-        <p> Nombre: ${ datos[i].name} </p>
-        <p> Casa: ${ datos[i].house} </p>
-        <p> Especie:${ datos[i].species} </p>
-        <p> Rol: ${datos[i].hogwartsStaff ? "Staff" : "Estudiante"} </p>
+    <section id="box-personajes" class="col-lg-4 col-xs-6" >`;
+    if (element.house === "Gryffindor") {
+      mostrar += `
+       <div id=gry>
+       <img class="bander" src="https://i.pinimg.com/originals/bc/a9/f9/bca9f91e0175d3ea40f24788e5e6837f.jpg">
+       </div>`;
+    }
+    if (element.house === "Slytherin") {
+      mostrar += `
+       <div id=sly>
+       <img class="bander" src="https://www.logolynx.com/images/logolynx/53/5390e974544de6279c4d9cb6253e3a2c.jpeg">
+       </div>`;
+    }
+    if (element.house === "Ravenclaw") {
+      mostrar += `
+       <div id="rav">
+       <img class="bander" src="https://i0.wp.com/bloghogwarts.com/wp-content/uploads/2008/05/ravenclawcrest.jpg">
+       </div>`;
+    }
+    if (element.house === "Hufflepuff") {
+      mostrar += `
+       <div id="huf">
+       <img class="bander" src="https://i2.wp.com/bloghogwarts.com/wp-content/uploads/2008/05/hufflepuffcrest.jpg">
+       </div>`;
+    }
+    if (element.house === "") {
+      mostrar += `
+       <div>
+       <img id="hollow" class="bander" src="https://img2.freepng.es/20180406/tpe/kisspng-symbol-multiplication-sign-computer-icons-black-background-5ac79361584457.4638442215230288333616.jpg">
+       </div>`;
+    }
+    mostrar += `
+    <div class="caracteristicas col-xs-12 col-lg-12"> 
+     <div class="imglogo col-xs-9 col-lg-9">
+     <img id="imagenlogo" src="${ element.image}"/>
+        <p class="tittle">${ element.name} </p>
+        <p class="tittle">${ element.house} </p> 
+        <p> Especie:${ element.species} </p>
+        <p> Rol: ${element.hogwartsStaff ? "Staff" : "Estudiante"} </p>
        `;
-    if (typeof datos[i].yearOfBirth === "number") {
+    if (typeof element.yearOfBirth === "number") {
       mostrar += 
-     `<div> Edad: ${2019 - datos[i].yearOfBirth} </div>
+     ` <p> Edad: ${2019 - element.yearOfBirth} </p> 
      `;
     } else {
       mostrar += `<p> Edad: No se encontro </p>
     `;
     }
-    mostrar += ` 
-       <p> Actor: ${ datos[i].actor} </p>
+    mostrar += `  
+       <p> Actor: ${element.actor} </p>
        </div>
        </div>
-    </section>   
-       `;
-  }
+    </section>`;
+  });
   personajes.innerHTML = mostrar;
 };
 

@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[class*="col-"]{
+    float: left;
+}
+
+@media(max-width:767px){
+    .col-xs-12{width: 100%}
+    .col-xs-6{width: 50%}
+    .col-xs-4{width: 33.33333333%}
+}
+
+@media(min-width:1200px){
+    .col-lg-12{width:100%}
+    .col-lg-9{width: 75%}
+    .col-lg-4{width: 33.33333333%}
+    .col-lg-3{width: 25%}
+}
+
+.todo {
+    background: gray;
+}
+
+#contenedor-personajes {
+    border: 1px solid rgb(54, 53, 53);
+    background: rgb(160, 120, 133);
+}
+
+#interior {
+    border-radius: 10px;
+    border: 1px solid rgb(117, 83, 83);
+    background: white;
+}
+
+ #imagenlogo {
+    width: 140px;
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.bander{
+    height: 50px;
+    width: 50px;
+    float: right;
+    padding-right: 8px;
+}
+
+.tittle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+select {
+    margin: 7px;
+    border-radius: 3px;
+    background: rgb(67, 121, 238);
+    width: 2cm;
+}
+
+h1{
+    color:white;
+    padding: 50px 0 29px 63px; 
+    font-weight: normal;
+    font-size: 28px;
+} 
+
+.titulo-principal {
+    font-size: 30px;
+    font-weight: bold;
+}
+
