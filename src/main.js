@@ -77,7 +77,7 @@ const listaPotter = (datos) => {
     mostrar += `  
        <p> Actor: ${element.actor} </p>
        </div>
-       </div>
+      </div>
     </section>`;
   });
   personajes.innerHTML = mostrar;

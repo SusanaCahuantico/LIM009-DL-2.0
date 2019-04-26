@@ -33,7 +33,7 @@ const filtrarPorRolStaff = (datos) => {
 /* Creando mi función de orden ascendente */
 const ordenDescendente = (datos) => {
   const orden = datos.sort((a, b) => {
-    if (a.yearOfBirth > b.yearOfBirth) {
+    if (a.yearOfBirth >= b.yearOfBirth) {
       return 1;
     } else {
       return -1;
@@ -43,8 +43,8 @@ const ordenDescendente = (datos) => {
 };
 
 const ordenAscendente = (datos) => {
-  const ordenA = datos.sort((a,b) => {
-    if (a.yearOfBirth < b.yearOfBirth) {
+  const ordenA = datos.sort((a, b) => {
+    if (a.yearOfBirth <= b.yearOfBirth) {
       return 1;
     } else {
       return -1;

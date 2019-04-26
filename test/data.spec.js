@@ -25,7 +25,7 @@ describe('filtrarPorRolStudent', () => {
     expect(typeof window.potter.filtrarPorRolStudent).toBe('function');
   });
   it('Esta función debería filtrar por casa', () => {
-    expect(window.potter.filtrarPorRolStudent([{ name: "Harry Potter", hogwartsStudent: true}, { name: "Severus Snape", hogwartsStaff: true}], "Estudiante")).toEqual([{name: "Harry Potter", houwartsStudent: true}]);
+    expect(window.potter.filtrarPorRolStudent([{ name: "Harry Potter", hogwartsStudent: true}, { name: "Severus Snape", hogwartsStaff: true}], "Estudiante")).toEqual([{name: "Harry Potter", hogwartsStudent: true}]);
   });
 });
 
@@ -42,7 +42,16 @@ describe('ordenAsc', () => {
   it('debería ser una función', () => {
     expect(typeof window.potter.ordenAscendente).toBe('function');
   });
-  it('Esta función debería ordenar por edad', () => {
-    expect(window.potter.ordenAsc([{ yearOfBirth: 1980}, { yearOfBirth: 1960}])).toEqual([{ yearOfBirth: 1980}, { yearOfBirth: 1960}]);
+  it('Esta función debería ordenar por edad Ascendente', () => {
+    expect(window.potter.ordenAscendente([{ yearOfBirth: 1980}, { yearOfBirth: 1960}])).toEqual([{ yearOfBirth: 1980}, { yearOfBirth: 1960}]);
+  });
+});
+
+describe('ordenDesc', () => {
+  it('deberìa ser una función', () => {
+    expect(typeof window.potter.ordenDescendente).toBe('function');
+  });
+  it('Esta función debería ordenar por edad Descendente', () => {
+    expect(window.potter.ordenDescendente([{yearOfBirth: 1980}, {yearOfBirth: 1960}])).toEqual([{yearOfBirth: 1960}, {yearOfBirth: 1980}]);
   });
 });
