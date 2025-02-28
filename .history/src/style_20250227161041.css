@@ -21,6 +21,10 @@
     .col-lg-3{width: 25%}
 }
 
+.todo {
+    background: gray;
+}
+
 #contenedor-personajes {
     border: 1px solid rgb(54, 53, 53);
     background: rgb(160, 120, 133);

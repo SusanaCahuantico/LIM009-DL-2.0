@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lover 2.0 Harry Potter</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <main class="container">
+  <div class="w-full lg:w-1/4 p-4 bg-gray-900 text-white">
+      <div>
+        <header>
+          <img id="logo" src="imagen/logo.png" alt="logo-Harry-Potter" class="col-xs-4 col-lg-12">
+        </header>
+      </div>
+    <div class="col-xs-4 col-lg-12">
+
+      <div class="h4"> Ordenar por edad</div>
+
+      <div class="btn">
+        <!--<img src="imagen/flechaarriba.png" alt="flecha-arriba">-->
+        <button id="ordenasc"  class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ascendente</button>
+      </div>
+
+      <div>
+        <!--<img src="imagen/flechaabajo.png" alt="flecha-abajo"> -->
+        <button id="ordendesc"  class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Descendente</button>
+      </div>
+    </div>
+
+    <div class="col-xs-4 col-lg-12 filtrar">
+      <p class="filtrar-por">Filtrar por:</p>
+      <div class="lista">
+      </div>
+        <div class="botones col-4">
+          <div>Genero</div><select id="genero">
+            <option>Genero</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+          <div>Rol</div>
+          <select id="rol" class="bg-gray-800 text-white p-2 rounded">
+            <option>Rol</option>
+            <option id="rol-student" value="hogwartsStudent" >Estudiante</option>
+            <option id="rol-staff" value="hogwartsStaff">Personal</option>
+          </select>
+          <div>Casas</div><select id="casa">
+            <option>Casas</option>
+            <option value="Gryffindor">Gryffindor</option>
+            <option value="Slytherin">Slytherin</option>
+            <option value="Hufflepuff">Hufflepuff</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+          </select>
+        </div>
+    </div>
+  </div>
+
+  <div id= "contenedor-personajes" class="col-xs-12 col-lg-9">
+    <p class="h4 titulo-principal">Personajes de la Saga de Harry Potter:</p>
+    <div id="personajes">
+      
+    </div>
+  </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

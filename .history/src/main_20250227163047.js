@@ -8,7 +8,7 @@ const ascendente = document.getElementById('ordenasc');
 const descendente = document.getElementById('ordendesc');
 
 const cardJSON = () => {
-  fetch('https://hp-api.onrender.com/api/characters')
+  fetch('https://harry-potter-api.onrender.com/personajes')
     .then(res => res.json())
     .then(datos => {
       listaPotter(datos);

@@ -8,7 +8,7 @@ const ascendente = document.getElementById('ordenasc');
 const descendente = document.getElementById('ordendesc');
 
 const cardJSON = () => {
-  fetch('https://hp-api.onrender.com/api/characters')
+  fetch('https://raw.githubusercontent.com/SusanaCahuantico/LIM009-DL-2.0/master/src/data/potter.json')
     .then(res => res.json())
     .then(datos => {
       listaPotter(datos);
@@ -26,7 +26,7 @@ const listaPotter = (datos) => {
   let mostrar = "";
   datos.forEach((element) => {
     mostrar += `
-    <div id="box-personajes" class="w-full sm:w-1/2 md:w-1/3 p-4" >`;
+    <section id="box-personajes" class="w-full sm:w-1/2 md:w-1/3 p-4" >`;
     if (element.house === "Gryffindor") {
       mostrar += `
        <div id=gry>
@@ -78,7 +78,7 @@ const listaPotter = (datos) => {
        <p> Actor: ${element.actor} </p>
        </div>
       </div>
-    </div>`;
+    </section>`;
   });
   personajes.innerHTML = mostrar;
 };
