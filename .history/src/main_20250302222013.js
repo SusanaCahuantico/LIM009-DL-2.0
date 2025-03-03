@@ -26,7 +26,7 @@ const listaPotter = (datos) => {
   let mostrar = "";
   datos.forEach((element) => {
     mostrar += `
-    <div id="box-personajes" class="w-full p-5 m-2" >`;
+    <div id="box-personajes" class="w-full sm:w-1/2 md:w-1/3 p-4" >`;
     if (element.house === "Gryffindor") {
       mostrar += `
        <div id=gry>
@@ -58,7 +58,7 @@ const listaPotter = (datos) => {
        </div>`;
     }
     mostrar += `
-    <div class="caracteristicas"> 
+    <div class="caracteristicas col-xs-12 col-lg-12"> 
      <div class="imglogo">
      <img id="imagenlogo" src="${ element.image}"/>
         <p class="tittle">${ element.name} </p>

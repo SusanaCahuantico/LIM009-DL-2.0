@@ -26,7 +26,7 @@ const listaPotter = (datos) => {
   let mostrar = "";
   datos.forEach((element) => {
     mostrar += `
-    <div id="box-personajes" class="w-full p-5 m-2" >`;
+    <div id="box-personajes" class="w-full p-4" >`;
     if (element.house === "Gryffindor") {
       mostrar += `
        <div id=gry>
